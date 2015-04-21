@@ -1,0 +1,145 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    width: 100%;
+    background-color: black;
+    background-position: center; 
+    background-image: url(img/boat.jpg);
+    background-size: auto 1124px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+  color: white;
+}
+
+section {
+  background-color: rgba(0,0,0,0.75);
+  padding-bottom: 50px;
+}
+
+#mainnav {
+  background-color: rgba(0,0,0,0.75);
+  border-radius: 5px;
+  border: 1px solid black;
+  display: block;
+  margin: auto;
+}
+
+#mainnav li {
+ 
+}
+
+h1 {
+  text-align: center;
+  font-family: "Umbrage";
+  font-size: 5em;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Umbrage";
+  font-weight: 200;
+  margin-top: 0;
+  font-weight: normal;
+  font-size: 3em;
+}
+
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs > li a, .nav-pills > li a {
+  border-radius: 0;
+}
+
+.nav-tabs, .nav-pills {
+  text-align:center;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 5px 0px 5px;
+  margin: 30px 0 10px 0;
+  border-bottom: 1px solid white;
+
+}
+
+.menu-item-list {
+  padding: 20px;
+  padding-top: 0px;   
+}
+
+.menu-item {
+  max-width: 100%;
+  padding: 0px 0px 20px 0px;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.item-name {
+  float: left;
+  padding-right: 0.43em;
+  font-size: 26px;
+}
+
+.item-price {
+  float: right;
+  font-size: 26px;
+  padding-left: 0.43em;
+}
+
+
+.item-description {
+  font-size: 14px;
+  clear: both;
+  font-style: italic;
+}
+
+#map-canvas {
+  width: 100%;
+  height: 300px;
+  background-color: green;
+}
+
+.about-img {
+  width: 100%;
+}
+
+.about-copy {
+  margin: 10px 15px;    
+}
+
+
+.location, .hours {
+  text-align: center;
+  display: block;
+    
+}
+
+.icon-strip {
+	text-align: center;
+	padding: 10px 0 10px 0;
+}
+
+.icon-strip a {
+  display: inline;
+  margin: 0px 10px;
+}
+

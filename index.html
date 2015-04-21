@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="http://static.cloudstitch.io/cloudstitch.js" app="jakelau6365/hao-bao-"></script>
+    <link type="cloudstitch/gsheet" href="http://cloudstitch.io/jakelau6365/hao-bao-/datasource/sheet" />
+    <link href="http://img2.wsimg.com/ip/v1.2.1/style/font-umbrage.css" rel="Stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-xs-12 title">
+          <h1>Hao Bao!</h1>
+          <h2>Chinese Soul Food</h2>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <!-- Nav tabs -->
+        <ul id="mainnav" class="nav nav-pills" role="tablist">
+          <li role="presentation" class="active"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">Menu</a></li>
+          <li role="presentation"><a href="#location" aria-controls="location" role="tab" data-toggle="tab">Location</a></li>
+          <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+          <li role="presentation"><a href="#press" aria-controls="press" role="tab" data-toggle="tab">Press</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="menu">
+            <section class="menu-item-list" connect="Menu!rows">
+
+
+              <div class="menu-item">                
+                <div class="section-wrapper" show-if="Menu!col(Section)">
+                  <div class="section-title" connect="Menu!col(Section)">Food</div>
+                </div>
+                
+                <div class="item-wrapper" show-if="Menu!col(Item)">
+                  <div class="media">
+                    <div class="media-left">
+                      <img width="100px" height="100px" class="media-object" src="#" connect-src="Menu!col(Image)" />
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading" connect="Menu!col(Item)">Combination Platter</h4>
+                      <h5>
+                        <span hide-if="Menu!col(SoldOut)" connect="Menu!col(Price)">$12</span>
+                        <span show-if="Menu!col(SoldOut)" class="soldout">Sold Out!</span>
+                      </h5>
+                      <p connect="Menu!col(Description)">An incredible tour through our most popular menu items. Hao Bao Signature Dumplings + Imperial Chicken + Chinese Noodle Salad = Your new favorite meal.</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- Menu Item -->
+
+
+
+            </section>
+          </div>
+          
+          <div role="tabpanel" class="tab-pane fade" id="location">
+        
+
+            <section>
+              <div id="map-canvas"></div>
+              <h3>234 Johnson Street</h3>
+              <p connect="Location!B2" class="location">Next to Broadway Bike.</p>
+              <p class="hours"><i>Hours: </i><span connect="Location!B3">Until 5</span></p>                
+              <div id="map-address" style="display:none" connect="Location!B1"></div>
+            </section>
+
+          </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="about">    
+          <section>
+            <div class="icon-strip">
+              <a connect-href="Business!B4" target="_blank" href="#"><img src="img/twitter.png"></img></a>
+              <a connect-href="Business!B6" target="_blank" href="#"><img src="img/facebook.png"></img></a>
+              <a connect-href="Business!B11" target="_blank" href="#"><img src="img/instagram.png"></img></a>
+              <a connect-href="Business!B7" target="_blank" href="#"><img src="img/yelp.png"></img></a>
+            </div>
+            <div class="about">
+              <img class="about-img" connect-src="Business!B8" src="#" />
+              <div class="about-copy" connect="Business!B9">Here is all about us</div>
+            </div>
+          </section>
+        </div>
+    
+        <div role="tabpanel" class="tab-pane fade" id="press">
+          <section style="padding: 15px 20px;">
+            <h3>Read about us in the press!</h3>
+            <ul connect="Press!rows" class="press-strip">
+              <li><a data-cts='this :is sheet|Press!col(Article); this {"attribute": "href"} :is sheet|Press!col(URL);' href="#">Foobar</a></li>
+            </ul>                  
+          </section>
+        </div>
+
+      </div><!-- col -->
+    </div><!-- row -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
